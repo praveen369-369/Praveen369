@@ -1,30 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iframe</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My First Web Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Inline fallback so the page looks great without an external file */
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <h1>iframe</h1>
+      body {
+        font-family: "Segoe UI", system-ui, sans-serif;
+        background: #f4f6f9;
+        color: #1a1a2e;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 3rem 1rem;
+      }
 
-    <iframe src=""></iframe><br>
+      main {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        max-width: 720px;
+        width: 100%;
+        padding: 2.5rem 2rem;
+      }
 
-    <a href="https://www.amazon.in/" 
-       target="_blank" 
-       rel="noopener noreferrer">amazon</a><br>
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #0f3460;
+        margin-bottom: 1rem;
+        letter-spacing: -0.5px;
+      }
 
-    <a href="https://www.flipkart.com/" 
-       target="_blank" 
-       rel="noopener noreferrer">Flipkart</a><br>
+      p {
+        font-size: 1.05rem;
+        line-height: 1.75;
+        color: #444;
+        margin-bottom: 1.5rem;
+      }
 
-    <a href="https://www.myntra.com/" 
-       target="_blank" 
-       rel="noopener noreferrer">myntra</a><br>
+      figure {
+        margin: 1.5rem 0;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      }
 
-</body>
+      figure img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      figcaption {
+        font-size: 0.85rem;
+        color: #777;
+        padding: 0.5rem 0.75rem;
+        background: #f9f9f9;
+        text-align: center;
+      }
+
+      a.external-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-top: 0.5rem;
+        padding: 0.6rem 1.2rem;
+        background: #0f3460;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: background 0.2s ease;
+      }
+
+      a.external-link:hover { background: #16213e; }
+      a.external-link svg { flex-shrink: 0; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- Heading -->
+      <h1>Welcome to My First Web Page</h1>
+
+      <!-- Paragraph -->
+      <p>
+        This is a simple web page built with plain HTML and CSS. It demonstrates
+        the core building blocks of every website: semantic structure, images with
+        alternative text, and accessible hyperlinks. From here, the possibilities
+        are endless — add JavaScript for interactivity, a CSS framework for rapid
+        styling, or a back-end to make it truly dynamic.
+      </p>
+
+      <!-- Image with alt text -->
+      <figure>
+        <img
+          src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=900&auto=format&fit=crop"
+          alt="A laptop screen displaying colorful programming code in a dark-themed editor"
+          width="900"
+          height="506"
+        />
+        <figcaption>Code lives at the heart of every web experience.</figcaption>
+      </figure>
+
+      <p>
+        Ready to dive deeper? The Mozilla Developer Network (MDN) is the
+        definitive reference for HTML, CSS, and JavaScript — completely free and
+        beginner-friendly.
+      </p>
+
+      <!-- Hyperlink opening in a new tab -->
+      <a
+        class="external-link"
+        href="https://developer.mozilla.org"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <!-- Inline SVG "external link" icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2.5"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        Visit MDN Web Docs
+      </a>
+    </main>
+  </body>
 </html>
-
-
-
